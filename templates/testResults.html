@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Baza osób ankietowanych: Podlewaczka{% endblock %}
+
+{% block page_content %}
+<div class="container">
+ <h1>Baza ankietowanych</h1>   
+    <div class="page-header">
+        <div class="jumbotron">  
+            <h4>Ilość osób które wypełniły ankietę:  {{number}}</h4>
+        </div>
+
+        <table class="table">
+            <tr>
+				<th>Wiek</th>
+				<th>Płeć</th>
+                <th>Czy posiadasz rośliny?</th>
+                <th>Jak często podlewasz rośliny?</th>
+				<th>Czy pamiętasz o podlewaniu?</th>
+                <th>Czy posiadasz ogrod?</th>
+                <th>Czy podlewasz rosliny w ogrodzie?</th>
+                <th>Ile h w tygodniu podlewasz rośliny?</th>
+                <th>Czy wiesz ile wody potrzebuje dana roślina i trzymasz się tego?</th>
+				<th>Czy kożystasz z systemu nawadniania?</th>
+                <th>Czy kozystasz z aplikacji wspomagającej nawadnianie roślin?</th>
+                <th>Czy kożystał byś z aplikacji wspomagajacej nawadnianie?</th>
+			</tr>
+        {% for case in listOfPeople %}
+        <tr>
+            <td>{{ case.question1 }}</td>
+            <td>{{ case.question2 }}</td>
+            <td>{{ case.question3 }}</td>
+            <td>{{ case.question4 }}</td>
+            <td>{{ case.question5 }}</td>
+            <td>{{ case.question6 }}</td>
+            <td>{{ case.question7 }}</td>
+            <td>{{ case.question8 }}</td>
+            <td>{{ case.question9 }}</td>
+            <td>{{ case.question10}}</td>
+            <td>{{ case.question11 }}</td>
+            <td>{{ case.question12 }}</td>
+        </tr> 
+        {% endfor %}   
+        </table>
+
+    </div>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="jumbotron">  
+    <p>{{ moment(current_time).format('LLL') }}</p>    
+</div>
+{% endblock %}

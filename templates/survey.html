@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+{% block title %}Ankieta{% endblock %}
+
+{% block content %}
+<div class="container">
+<div class="page-header">
+    <h1>Ankieta</h1>
+    <h5>Ankieta dotyczaca użyteczności aplikacji do podlewania</h5>    
+    <br/>
+    <br/>
+
+    <form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+
+    <p><h4><strong>{% if form.question1.flags.required %}*{% endif %}{{ form.question1.label }}</strong></h4></p>
+    {% for error in form.question1.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+    {{ form.question1 }}
+
+    <br/>
+    <br/>
+    <p><h4><strong>{% if form.question2.flags.required %}*{% endif %}{{ form.question2.label }}</strong></h4></p>
+    {% for error in form.question2.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}    
+    {{ form.question2 }}
+
+
+    <br/>
+    <p><h4><strong>{% if form.question3.flags.required %}*{% endif %}{{ form.question3.label }}</strong></h4></p>
+    {% for error in form.question3.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+    <p>{{ form.question3 }}</p>
+
+    <br/>
+    <p><h4><strong>{% if form.question4.flags.required %}*{% endif %}{{ form.question4.label }}</strong></h4></p>
+    {% for error in form.question4.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}
+    <p>{{ form.question4 }}</p>
+
+
+    <br/>
+    <p><h4><strong>{% if form.question5.flags.required %}*{% endif %}{{ form.question5.label }}</strong></h4></p>
+    {% for error in form.question5.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}    
+    <p>{{ form.question5 }}</p>
+
+
+    <br/>
+    <p><h4><strong>{% if form.question6.flags.required %}*{% endif %}{{ form.question6.label }}</strong></h4></p>
+    {% for error in form.question7.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}    
+    <p>{{ form.question6 }}</p>
+
+
+    <br/>
+    <p><h4><strong>{% if form.question7.flags.required %}*{% endif %}{{ form.question7.label }}</strong></h4></p>
+    {% for error in form.question8.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}    
+    <p>{{ form.question7 }}</p>
+
+
+    <br/>
+    <p><h4><strong>{% if form.question8.flags.required %}*{% endif %}{{ form.question8.label }}</strong></h4></p>
+    {% for error in form.question8.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}    
+    <p>{{ form.question8 }}</p>
+
+
+    <br/>
+    <p><h4><strong>{% if form.question9.flags.required %}*{% endif %}{{ form.question9.label }}</strong></h4></p>
+    {% for error in form.question9.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}  
+    <p>{{ form.question9 }}</p>
+
+    <br/>
+    <p><h4><strong>{% if form.question10.flags.required %}*{% endif %}{{ form.question10.label }}</strong></h4></p>
+    {% for error in form.question10.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}  
+    <p>{{ form.question10 }}</p>
+
+    <br/>
+    <p><h4><strong>{% if form.question11.flags.required %}*{% endif %}{{ form.question11.label }}</strong></h4></p>
+    {% for error in form.question11.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}  
+    <p>{{ form.question11 }}</p>
+
+    <br/>
+    <p><h4><strong>{% if form.question12.flags.required %}*{% endif %}{{ form.question12.label }}</strong></h4></p>
+    {% for error in form.question12.errors %}
+    <span style="color: red;">{{ error }}</span>
+    {% endfor %}  
+    <p>{{ form.question12 }}</p>
+
+    <br/>
+
+    <p> <button type="submit" class="btn btn-lg btn-success"> Zapisz </button></p>
+
+</form>
+</div>
+</div>
+{% endblock %}

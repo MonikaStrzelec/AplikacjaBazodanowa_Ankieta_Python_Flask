@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}Nie znaleziono strony{% endblock %}
+
+{% block page_content %}
+<div class="container">
+    <div class="page-header">
+        <h1>Error 404</h1>
+        <h2>Nie znaleziono strony którą chcesz otworzyć</h2>
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="jumbotron">  
+<p>{{ moment(current_time).format('LLL') }}</p>    
+<p><h5>To było {{ moment(current_time).fromNow(refresh=True) }}</h5></p>
+</div>
+{% endblock %}

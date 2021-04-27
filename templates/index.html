@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Podlewaczka{% endblock %}
+
+{% block page_content %}
+
+<!-- Button -->
+<!-- <div class="jumbotron"> -->
+<div class="container">
+    <h1>Witam!</h1>    
+    <h3>Kliknij poniższy przycisk by wypełnić ankietę:</h3>
+    <p class="lead"></p>
+    <p><a class="btn btn-lg btn-success" href="/survey" role="button">Ankieta</a>
+    </p>
+</div>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="jumbotron">  
+<p>{{ moment(current_time).format('LLL') }}</p>    
+<p><h5>To było {{ moment(current_time).fromNow(refresh=True) }}</h5></p>
+</div>
+
+{% endblock %}
